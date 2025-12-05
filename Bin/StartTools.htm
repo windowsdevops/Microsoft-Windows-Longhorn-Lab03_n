@@ -1,0 +1,826 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="C1ontent-Type" Content="text/html; charset=Windows-1252">
+<title>Longhorn SDK Tools</title>
+<style>
+    a:hover { color:#ff0000; }
+  td, th { 
+   MARGIN-LEFT:  10px; 
+   MARGIN-RIGHT: 10px;
+   FONT: normal 8pt;
+   FONT-FAMILY: Verdana, Arial, Helvetica;   
+   }
+</style>
+</head>
+
+<body topmargin="0" leftmargin="0">
+
+<!-- Start Toolbar-->
+<div ID="TBDownLevelDiv">
+	<table WIDTH="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0" BGCOLOR="#ffffff">
+		<tr>
+			<td BGCOLOR="#000000" HEIGHT="20" VALIGN="center" ALIGN="right" NOWRAP>
+			<font COLOR="#ffffff" FACE="Verdana, Arial" SIZE="1"><b>&nbsp;&nbsp;<a style="color: #ffffff; text-decoration: none" target="_top" href="http://support.microsoft.com"><font COLOR="#ffffff">Links 
+			to the Web:&nbsp;&nbsp;&nbsp;&nbsp; Support</font></a>&nbsp;&nbsp;<font COLOR="#ffffff">|</font> 
+			&nbsp;&nbsp;<a style="color: #ffffff; text-decoration: none" target="_top" href="http://search.microsoft.com/"><font COLOR="#ffffff">Search</font></a>&nbsp;&nbsp;<font COLOR="#ffffff">|</font> 
+			&nbsp;&nbsp;<a style="color: #ffffff; text-decoration: none" target="_top" href="http://www.microsoft.com/"><font COLOR="#ffffff">microsoft.com 
+			Guide</font></a>&nbsp;&nbsp; </b></font></td>
+		</tr>
+		<tr>
+			<!-- Start: Local menus -->
+			<td BGCOLOR="#4A5C82" HEIGHT="20" VALIGN="center" NOWRAP>
+			<table CELLPADDING="0" CELLSPACING="0" BORDER="0" bgcolor="#000000" style="border-collapse: collapse" bordercolor="#111111">
+				<tr>
+								<td vAlign="bottom" noWrap bgColor="#000000"><font face="Verdana, Arial" color="#ffffff" size="1"><b>&nbsp;&nbsp;
+											<font color="#ffffff">Related Links:&nbsp;&nbsp;&nbsp;&nbsp; <a style="FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: none" href="http://msdn.microsoft.com/"
+													target="_top">MSDN Online </a></font>&nbsp;&nbsp;</b> </font>
+								</td>
+								<td vAlign="bottom" bgColor="#000000"><font face="Verdana, Arial" color="#ffffff" size="1"><b>|</b>
+									</font>
+								</td>
+								<td vAlign="bottom" noWrap bgColor="#000000"><font face="Verdana, Arial" color="#ffffff" size="1"><b><a style="FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: none" href="http://windowsbeta.microsoft.com/"
+												target="_top">&nbsp;&nbsp; <font color="#ffffff">"Longhorn" Beta Newsgroups</font></a><font color="#ffffff"><a style="FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: none" href="http://msdn.microsoft.com/net/"
+													target="_top"> </a></font>&nbsp;&nbsp;</b> <font face="Verdana, Arial" color="#ffffff" size="1">
+											<b>|</b> </font><font color="#ffffff"></B><a style="FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: none" href="http://msdn.microsoft.com/longhorn/"
+												target="_top"><font color="#ffffff"><b>"Longhorn" Developer Center</font></a></font>&nbsp;&nbsp;</B>
+									</font>
+								</td>
+								<td noWrap align="right" width="100%" bgColor="#000000"><IMG src="../License/LHSDK-logo-310.jpg">
+								</td>
+								<td noWrap width="100%" bgColor="#000000"><br>
+									<br>
+								</td>
+							</tr>
+			</table>
+			</td>
+			<!-- End: Local menus -->
+		</tr>
+	</table>
+</div>
+<!-- End Toolbar-->
+<table CELLPADDING="10" CELLSPACING="0" BORDER="0">
+	<tr>
+		<td>
+		<table>
+			<tr>
+				<td><br>
+				<span style="font-style: normal; font-variant: normal; font-weight: bold; font-size: medium; font-family: Verdana, Arial, Helvetica" align="left">
+				“Longhorn” SDK Tools</span> </td>
+			</tr>
+			<tr>
+				<td>The Developer Preview Edition of the Microsoft® Windows® 
+				Code-Named “Longhorn” SDK contains tools to aid in the 
+				development of applications that target the Microsoft® Windows® 
+				Code-Named &quot;Longhorn&quot; operating system. Tools for the 
+				communications subsystem code-named “Indigo”, along with the 
+				.NET Framework SDK tools and the Platform SDK tools are 
+				included.<p></td>
+			</tr>
+			<tr>
+				<td>Some additional “Longhorn” SDK tools that are not described 
+				below are located in the \ValueAdded folder on the “Longhorn” 
+				SDK CD.</td>
+			</tr>
+		</table>
+		<table height="65">
+			<tr>
+				<td height="38"><br>
+				<span style="font-style: normal; font-variant: normal; font-weight: bold; font-size: medium; font-family: Verdana, Arial, Helvetica" align="left">
+				.NET Framework Tools</span><br>
+				<hr></td>
+			</tr>
+			<tr>
+				<td><b>Note: This documentation is preliminary and is subject to 
+				change.</b>
+				<p>The Microsoft .NET Framework SDK tools are designed to make 
+				it easier for you to create, deploy, and manage applications and 
+				components that target the .NET Framework. This section contains 
+				detailed information about the tools.<br>
+				<br>
+				</td>
+			</tr>
+			<tr>
+				<td>You can run all of the .NET Framework SDK tools from the 
+				command line with the exception of the Assembly Cache Viewer 
+				(Shfusion.dll) and the Microsoft CLR Debugger (DbgCLR.exe). You 
+				must access Shfusion.dll from Microsoft Windows Explorer. 
+				DbgCLR.exe is located in the Microsoft.NET\FrameworkSDK\GuiDebug 
+				folder.<br>
+				<br>
+				</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td><b>Note&nbsp;&nbsp;</b>&nbsp;&nbsp;&nbsp;If you are using the .NET Framework version 
+				1.1, you can run the tools from the command line, but you must 
+				set the correct Path, Include, and Lib environment variables in 
+				each command prompt session. To set the environment variables, 
+				open a command prompt session and run the SDKVars.bat file 
+				located in the s<i>ystemroot</i>\Microsoft.NET\SDK\v1.1\Bin 
+				directory. </td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td><br>
+				<a href="#cpconnetframeworktoolsanchor1">Configuration and 
+				Deployment Tools</a><br>
+				<a href="#cpconnetframeworktoolsanchor5">Debugging Tools</a> <br>
+				<a href="#cpconnetframeworktoolsanchor3">Security Tools</a> <br>
+				<a href="#cpconnetframeworktoolsanchor4">General Tools</a> <br>
+				<a href="#cpconnetframeworktoolsanchor2">Indigo Tools</a> <br>
+				<a href="#cpconnetframeworktoolsanchor6">Platform SDK Tools</a>
+				</td>
+			</tr>
+		</table>
+		<table class="clsStd" id="cpconnetframeworktoolsanchor1">
+			<tr>
+				<td colspan="2"><br>
+				<span style="font-style: normal; font-variant: normal; font-weight: bold; font-size: 11pt; font-family: Verdana, Arial, Helvetica" align="left">
+				Configuration and Deployment Tools</span><br>
+				<br>
+				</td>
+			</tr>
+			<tr bgcolor="#dddddd">
+				<td width="259"><b>Tool</b></td>
+				<td><b>Description</b></td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfaspnetiisregistrationtoolaspnet_regiisexe.htm">
+				ASP.NET IIS Registration Tool (Aspnet_regiis.exe)</a> </td>
+				<td>Allows an administrator or installation program to update 
+				the scriptmaps for an ASP.NET application to point to the 
+				ASP.NET ISAPI version associated with the tool. You can also use 
+				the tool to perform other ASP.NET configuration operations.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfassemblycacheviewershfusiondll.htm">
+				Assembly Cache Viewer (Shfusion.dll)</a> </td>
+				<td>Allows you to view and manipulate the contents of the
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpconworkingwithassembliesglobalassemblycache.htm">
+				global assembly cache</a> using Windows Explorer.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfassemblygenerationutilityalexe.htm">
+				Assembly Linker (Al.exe)</a> </td>
+				<td>Generates a file with an assembly manifest from one or more 
+				files that are either resource files or
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpconmicrosoftintermediatelanguagemsil.htm">
+				Microsoft intermediate language (MSIL)</a> files.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfassemblyregistrationtoolregasmexe.htm">
+				Assembly Registration Tool (Regasm.exe)</a> </td>
+				<td>Reads the metadata within an assembly and adds the necessary 
+				entries to the registry, which allows COM clients to create .NET 
+				Framework classes transparently.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrffusionlogviewerfuslogvwexe.htm">
+				Assembly Binding Log Viewer (Fuslogvw.exe)</a> </td>
+				<td>Displays details for failed assembly binds. This information 
+				helps you diagnose why the .NET Framework cannot locate an 
+				assembly at run time.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfglobalassemblycacheutilitygacutilexe.htm">
+				Global Assembly Cache Tool (Gacutil.exe)</a> </td>
+				<td>Allows you to view and manipulate the contents of the global 
+				assembly cache and download cache. While Shfusion.dll provides 
+				similar functionality, you can use Gacutil.exe from build 
+				scripts, makefile files, and batch files.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpconinstallerutilityinstallutilexe.htm">
+				Installer Tool (Installutil.exe)</a> </td>
+				<td>Allows you to install and uninstall server resources by 
+				executing the installer components of a specified assembly.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfisolatedstorageutilitystoreadmexe.htm">
+				Isolated Storage Tool (Storeadm.exe)</a> </td>
+				<td>Lists or removes all existing stores for the currently 
+				logged-on user.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/LHSDK/ndp/cpgrfmanifestgeneratormgexe.htm">
+				Manifest Generator (mg.exe)</a> </td>
+				<td>The Manifest Generator creates application manifest files 
+				for applications deployed with the new .NET Framework deployment 
+				feature (code-named &quot;ClickOnce&quot;).</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfnativeimagegeneratorngenexe.htm">
+				Native Image Generator (Ngen.exe)</a> </td>
+				<td>Creates a native image from a managed assembly and installs 
+				it in the native image cache on the local computer.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpconnetframeworkadministrationtoolmscorcfgmsc.htm">
+				.NET Framework Configuration Tool (Mscorcfg.msc)</a> </td>
+				<td>Provides a graphical interface for managing .NET Framework 
+				security policy and applications that use remoting services. 
+				This tool also allows you to manage and configure assemblies in 
+				the global assembly cache.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfnetservicesinstallationutilityregsvcsexe.htm">
+				.NET Services Installation Tool (Regsvcs.exe)</a> </td>
+				<td>Adds managed classes to Windows 2000 Component Services by 
+				loading and registering the assembly and generating, 
+				registering, and installing the type library into an existing 
+				COM+ 1.0 application.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfsoapsudsutilitysoapsudsexe.htm">
+				Soapsuds Tool (Soapsuds.exe)</a> </td>
+				<td>Helps you compile client applications that communicate with 
+				XML Web services using a technique called remoting.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrftypelibraryexportertlbexpexe.htm">
+				Type Library Exporter (Tlbexp.exe)</a> </td>
+				<td>Generates a type library from a common language runtime 
+				assembly.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrftypelibraryimportertlbimpexe.htm">
+				Type Library Importer (Tlbimp.exe)</a> </td>
+				<td>Converts the type definitions found within a COM type 
+				library into equivalent definitions in managed metadata format.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfwebservicesdescriptionlanguagetoolwsdlexe.htm">
+				Web Services Description Language Tool (Wsdl.exe)</a> </td>
+				<td>Generates code for XML Web services and XML Web services 
+				clients from Web Services Description Language (WSDL) contract 
+				files, XML Schema Definition (XSD) schema files, and .discomap 
+				discovery documents.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfwebservicesdiscoverytooldiscoexe.htm">
+				Web Services Discovery Tool (Disco.exe)</a> </td>
+				<td>Discovers the URLs of XML Web services located on a Web 
+				server, and saves documents related to each XML Web service on a 
+				local disk.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpconxmlschemadefinitiontoolxsdexe.htm">
+				XML Schema Definition Tool (Xsd.exe)</a> </td>
+				<td>Generates XML schemas that follow the XSD language proposed 
+				by the World Wide Web Consortium (W3C). This tool generates 
+				common language runtime classes and
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ref/ns/system.data/c/dataset/dataset.htm">
+				DataSet</a> classes from an XSD schema file.</td>
+			</tr>
+		</table>
+		<table class="clsStd" id="cpconnetframeworktoolsanchor5">
+			<tr>
+				<td colspan="2" width="914"><br>
+				<span style="font-style: normal; font-variant: normal; font-weight: bold; font-size: 11pt; font-family: Verdana, Arial, Helvetica" align="left">
+				Debugging Tools</span><br>
+				<br>
+				</td>
+			</tr>
+			<tr bgcolor="#dddddd">
+				<td width="259"><b>Tool</b></td>
+				<td><b>Description</b></td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpconDebuggingProfiling.htm">
+				Managed Code Debugger (DbgCLR.exe)</a> </td>
+				<td>DbgCLR.exe is a debugger with the familiar Windows interface 
+				for debugging managed code. It is located in the 
+				Microsoft.NET/FrameworkSDK/GuiDebug folder.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfruntimedebuggercordbgexe.htm">
+				Runtime Debugger (Cordbg.exe)</a> </td>
+				<td>Provides command-line debugging services using the common 
+				language runtime Debug API. Used to find and fix bugs in 
+				programs that target the runtime.</td>
+			</tr>
+		</table>
+		<table class="clsStd" id="cpconnetframeworktoolsanchor3">
+			<tr>
+				<td colspan="2" width="914"><br>
+				<span style="font-style: normal; font-variant: normal; font-weight: bold; font-size: 11pt; font-family: Verdana, Arial, Helvetica" align="left">
+				Security Tools</span><br>
+				<br>
+				</td>
+			</tr>
+			<tr bgcolor="#dddddd">
+				<td width="259"><b>Tool</b></td>
+				<td><b>Description</b></td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfcertificatecreationtoolmakecertexe.htm">
+				Certificate Creation Tool (Makecert.exe)</a> </td>
+				<td>Generates X.509 certificates for testing purposes only.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfcertificatemanagertoolcertmgrexe.htm">
+				Certificate Manager Tool (Certmgr.exe)</a> </td>
+				<td>Manages certificates, certificate trust lists (CTLs), and 
+				certificate revocation lists (CRLs).</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfcodeaccesssecuritypolicyutilitycaspolexe.htm">
+				Code Access Security Policy Tool (Caspol.exe)</a> </td>
+				<td>Allows you to examine and modify machine, user, and 
+				enterprise-level code access security policies.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfpermissionsviewtoolpermviewexe.htm">
+				Permissions View Tool (Permview.exe)</a> </td>
+				<td>Displays the minimal, optional, and refused permission sets 
+				requested by an assembly. You can also use this tool to view all 
+				declarative security used by an assembly.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfpeverifytoolpeverifyexe.htm">
+				PEVerify Tool (PEverify.exe)</a> </td>
+				<td>Performs MSIL type safety verification checks and metadata 
+				validation checks on a specified assembly.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfpolicymigrationtoolmigpolexe.htm">
+				Policy Migration Tool (Migpol.exe)</a> </td>
+				<td>Migrates security policy between two compatible versions of 
+				the .NET Framework.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfsecutiltoolsecutilexe.htm">
+				Secutil Tool (Secutil.exe)</a> </td>
+				<td>Extracts strong name public key information or Authenticode 
+				publisher certificates from an assembly, in a format that can be 
+				incorporated into code.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfsoftwarepublishercertificatetesttoolcert2spcexe.htm">
+				Software Publisher Certificate Test Tool (Cert2spc.exe)</a> </td>
+				<td>Creates, for test purposes only, a Software Publisher's 
+				Certificate (SPC) from one or more X.509 certificates.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfstrongnameutilitysnexe.htm">
+				Strong Name Tool (Sn.exe)</a> </td>
+				<td>Helps create assemblies with strong names. Sn.exe provides 
+				options for key management, signature generation, and signature 
+				verification.</td>
+			</tr>
+		</table>
+		<table class="clsStd" id="cpconnetframeworktoolsanchor4">
+			<tr>
+				<td colspan="2"><br>
+				<span style="font-style: normal; font-variant: normal; font-weight: bold; font-size: 11pt; font-family: Verdana, Arial, Helvetica" align="left">
+				General Tools</span><br>
+				<br>
+				</td>
+			</tr>
+			<tr bgcolor="#dddddd">
+				<td width="259"><b>Tool</b></td>
+				<td><b>Description</b></td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrflicensecompilerlcexe.htm">
+				License Compiler (Lc.exe)</a> </td>
+				<td>Reads text files that contain licensing information and 
+				produces a .licenses file that can be embedded in a common 
+				language runtime executable.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfmanagementstronglytypedclassgeneratormgmtclassgenexe.htm">
+				Management Strongly Typed Class Generator (Mgmtclassgen.exe)</a>
+				</td>
+				<td>Allows you to quickly generate an early-bound class in C#, 
+				Visual Basic, or JScript for a specified Windows Management 
+				Instrumentation (WMI) class.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpconmsilassemblerilasmexe.htm">
+				MSIL Assembler (Ilasm.exe)</a> </td>
+				<td>Generates a PE file from
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpconmicrosoftintermediatelanguagemsil.htm">
+				Microsoft intermediate language (MSIL)</a>. You can run the 
+				resulting executable, which contains MSIL code and the required 
+				metadata, to determine whether the MSIL code performs as 
+				expected.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpconmsildisassemblerildasmexe.htm">
+				MSIL Disassembler (Ildasm.exe)</a> </td>
+				<td>Takes a PE file that contains MSIL code and creates a text 
+				file suitable as input to the MSIL Assembler (Ilasm.exe).</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfresourcefilegeneratorutilityresgenexe.htm">
+				Resource File Generator Tool (Resgen.exe)</a> </td>
+				<td>Converts text files and .resx (XML-based resource format) 
+				files to .NET common language runtime binary .resources files 
+				that can be embedded in a runtime binary executable or compiled 
+				into satellite assemblies.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfwindowsformsactivexcontrolimporteraximpexe.htm">
+				Windows Forms ActiveX Control Importer (Aximp.exe)</a> </td>
+				<td>Converts type definitions in a COM type library for an 
+				ActiveX control into a Windows Forms control.</td>
+			</tr>
+			<!-- Removed for WinHEC
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpconwindowsformsclassviewerwincvexe.htm">
+				Windows Forms Class Viewer (Wincv.exe)</a> </td>
+				<td>Finds managed classes matching a specified search pattern, 
+				and displays information about those classes using the 
+				Reflection API.</td>
+			</tr>
+			-->
+			<!-- Removed for WinHEC
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfwindowsformsresourceeditorwinresexe.htm">
+				Windows Forms Resource Editor (Winres.exe)</a> </td>
+				<td>Allows you to quickly and easily localize Windows Forms 
+				forms.</td>
+			</tr>
+			-->
+		</table>
+		<table class="clsStd" id="cpconnetframeworktoolsanchor2">
+			<tr>
+				<td height="38" colspan="2"><br>
+				<span style="font-style: normal; font-variant: normal; font-weight: bold; font-size: medium; font-family: Verdana, Arial, Helvetica" align="left">
+				Indigo Tools</span><br>
+				<hr></td>
+			</tr>
+			<tr>
+				<td colspan="2">“Indigo” provides a programming model and 
+				framework for building connected applications and Web services. 
+				Indigo brings together .NET Framework remoting, MSMQ, ASP.NET, 
+				and .NET Enterprise Services to form a unified model and runtime 
+				for building connected applications on the “Longhorn” platform.
+				<br>
+				<br>
+				</td>
+			</tr>
+			<tr bgcolor="#dddddd">
+				<td width="259"><b>Tool</b></td>
+				<td><b>Description</b></td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/indigo/grfMBDumpToolMBDumpexe.htm">
+				MBDump (MBDump.exe)</a></td>
+				<td>MBDump is an offline debugging tool that allows debuggers to 
+				dump and debug application state without holding the server. In 
+				M4, it dumps the process memory stack that can be debugged by 
+				WinDBG recognizing managed types.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/indigo/conMBTraceTool.htm">
+				MBTrace (MBTrace.exe)</a></td>
+				<td>MBTrace is a command line tool that establishes a trace 
+				client session with a server. It provides the means to determine 
+				the nodes that a client message is routed through to reach its 
+				intended destination. This information can assist developers and 
+				administrators to locate and fix a mis-configured a routing 
+				node, so that messages can be delivered to its intended end 
+				point.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/indigo/grfMBPingToolMBPingexe.htm">
+				MBPing (MBPing.exe)</a></td>
+				<td>MBPing is a diagnostic tool similar to ping.exe, that allows 
+				you to verify the operation of the message bus stack by sending 
+				a message to a MBPing handler, which will reply to the message.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/indigo/grfMBSpyToolMBSpyexe.htm">
+				MBSpy (MBSpy.exe)</a> </td>
+				<td>MBSpy is a tool that allows developers to observe message 
+				traffic at a port which is enabled for spying. The purpose of 
+				this tool is to aid developers in debugging application problems 
+				by being able to observe incoming or outgoing message traffic at 
+				a port.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/indigo/conWSDLGenTool.htm">
+				WSDLGen (WSDLGen.exe)</a></td>
+				<td>WSDLGen is a tool that uses WSDL and XSD files to create an 
+				interface for a client application to use a web service.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/indigo/conXSDGen.htm">
+				XSDGen (XSDGen.exe)</a></td>
+				<td>XSDGen creates XSD schema definitions from a CLR type, and a 
+				CLR type from XSD schemas.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/indigo/conClaimTool.htm">
+				ClaimTool (ClaimTool.exe)</a></td>
+				<td>ClaimTool.exe is a tool that assists in adding and deleting 
+				authorization data from Message Bus security configuration.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/indigo/conCertTool.htm">
+				CertTool (CertTool.exe)</a></td>
+				<td>CertTool is a tool that assists administrators with 
+				obtaining and deploying x509 certificates. It provides three 
+				basic functions: retrieve, export or install an x509 
+				certificate.</td>
+			</tr>
+		</table>
+		<table width="100%" id="cpconnetframeworktoolsanchor6">
+			<tr>
+				<td><br>
+				<br>
+				<span style="font-style: normal; font-variant: normal; font-weight: bold; font-size: medium; font-family: Verdana, Arial, Helvetica" align="left">
+				Microsoft Platform SDK Tools</span><hr></td>
+			</tr>
+		</table>
+		<table class="clsStd" width="100%">
+			<tr>
+				<td colspan="2"><br>
+				<span style="font-style: normal; font-variant: normal; font-weight: bold; font-size: 11pt; font-family: Verdana, Arial, Helvetica" align="left">
+				Crytography</span><br>
+				<br>
+				</td>
+			</tr>
+			<tr bgcolor="#dddddd">
+				<td width="259"><b>Tool</b></td>
+				<td><b>Description</b></td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfSoftwarePublisherCertificateTestToolCert2spcexe.htm">
+				Cert2SPC (Cert2SPC.exe)</a></td>
+				<td>Creates a test software publisher certificate.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfCertificateManagerToolCertmgrexe.htm">
+				CertMgr (CertMgr.exe)</a></td>
+				<td>Manages certificates, certificate trust lists, and 
+				certificate revocation lists.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">MakeCat (MakeCat.exe)</td>
+				<td>Creates a catalog file.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">
+				<a href="ms-help://MS.LHSDK.1033/LHSDK/lhsdk/ndp/cpgrfCertificateCreationToolMakecertexe.htm">
+				MakeCert (MakeCert.exe)</a></td>
+				<td>Creates an X.509 certificate.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">MakeCTL (MakeCTL.exe)</td>
+				<td>Creates a certificate trust list.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">SignTool (SignTool.exe)</td>
+				<td>Digitally signs a file, verifies signatures in files, or 
+				time stamps files.</td>
+			</tr>
+		</table>
+		<table class="clsStd" width="100%">
+			<tr>
+				<td colspan="2"><br>
+				<span style="font-style: normal; font-variant: normal; font-weight: bold; font-size: 11pt; font-family: Verdana, Arial, Helvetica" align="left">
+				Debugging</span><br>
+				<br>
+				</td>
+			</tr>
+			<tr bgcolor="#dddddd">
+				<td width="259"><b>Tool</b></td>
+				<td><b>Description</b></td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">DBMon</td>
+				<td>Debug Monitor</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">MapSym</td>
+				<td>MapSym</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">NTSD</td>
+				<td>Symbolic Debuggers</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">WinDbg</td>
+				<td>WinDbg Debugger</td>
+			</tr>
+		</table>
+		<table class="clsStd" width="100%">
+			<tr>
+				<td colspan="2"><br>
+				<span style="font-style: normal; font-variant: normal; font-weight: bold; font-size: 11pt; font-family: Verdana, Arial, Helvetica" align="left">
+				File Management</span><br>
+				<br>
+				</td>
+			</tr>
+			<tr bgcolor="#dddddd">
+				<td width="259"><b>Tool</b></td>
+				<td><b>Description</b></td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">Where</td>
+				<td>Where</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">WinDiff</td>
+				<td>Windiff</td>
+			</tr>
+		</table>
+		<table class="clsStd" width="100%">
+			<tr>
+				<td colspan="2"><br>
+				<span style="font-style: normal; font-variant: normal; font-weight: bold; font-size: 11pt; font-family: Verdana, Arial, Helvetica" align="left">
+				OLE</span><br>
+				<br>
+				</td>
+			</tr>
+			<tr bgcolor="#dddddd">
+				<td width="259"><b>Tool</b></td>
+				<td><b>Description</b></td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">MIDL</td>
+				<td>Using the MIDL compiler</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">OLEView</td>
+				<td>Using OLEView</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">UUIDGen</td>
+				<td>Generating interface UUIDs</td>
+			</tr>
+		</table>
+		<table class="clsStd" width="100%">
+			<tr>
+				<td colspan="2"><br>
+				<span style="font-style: normal; font-variant: normal; font-weight: bold; font-size: 11pt; font-family: Verdana, Arial, Helvetica" align="left">
+				Performance</span><br>
+				<br>
+				</td>
+			</tr>
+			<tr bgcolor="#dddddd">
+				<td width="259"><b>Tool</b></td>
+				<td><b>Description</b></td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">Bind (Bind.exe)</td>
+				<td>Minimizes application load time.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">ExCtrLst (ExCtrLst.exe)</td>
+				<td>Extensible counter list utility.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">PerfMtr (PerfMtr.exe)</td>
+				<td>Performance meter.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">Performance Monitor</td>
+				<td>Performance monitor.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">PStat (PStat.exe)</td>
+				<td>Performance statistics.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">Rebase (Rebase.exe)</td>
+				<td>Rebase.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">VADump (VADump.exe)</td>
+				<td>Virtual address dump.</td>
+			</tr>
+		</table>
+		<table class="clsStd" width="100%">
+			<tr>
+				<td colspan="2"><br>
+				<span style="font-style: normal; font-variant: normal; font-weight: bold; font-size: 11pt; font-family: Verdana, Arial, Helvetica" align="left">
+				Resource Files</span><br>
+				<br>
+				</td>
+			</tr>
+			<tr bgcolor="#dddddd">
+				<td width="259"><b>Tool</b></td>
+				<td><b>Description</b></td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">MC</td>
+				<td>Message Compiler</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">RC</td>
+				<td>Resource Compiler</td>
+			</tr>
+		</table>
+		<table class="clsStd" width="100%">
+			<tr>
+				<td colspan="2"><br>
+				<span style="font-style: normal; font-variant: normal; font-weight: bold; font-size: 11pt; font-family: Verdana, Arial, Helvetica" align="left">
+				TAPI</span><br>
+				<br>
+				</td>
+			</tr>
+			<tr bgcolor="#dddddd">
+				<td width="259"><b>Tool</b></td>
+				<td><b>Description</b></td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">ExtIDGen (ExtIDGen.exe)</td>
+				<td>Extension ID Generator</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">TB20</td>
+				<td>TAPI 2.0 browser</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">TB3X</td>
+				<td>TAPI 3.0 browser</td>
+			</tr>
+		</table>
+		<table class="clsStd" width="100%">
+			<tr>
+				<td colspan="2"><br>
+				<span style="font-style: normal; font-variant: normal; font-weight: bold; font-size: 11pt; font-family: Verdana, Arial, Helvetica" align="left">
+				Testing</span><br>
+				<br>
+				</td>
+			</tr>
+			<tr bgcolor="#dddddd">
+				<td width="259"><b>Tool</b></td>
+				<td><b>Description</b></td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">PfMon (PfMon.exe)</td>
+				<td>Monitors process faults.</td>
+			</tr>
+			<tr bgcolor="#eeeeee">
+				<td width="259">SC (SC.exe)</td>
+				<td>Tests a service program.</td>
+			</tr>
+		</table>
+		<p><br>
+		</p>
+		<p></p>
+		<hr>
+		<p>
+		<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 8pt; font-family: Verdana, Arial, Helvetica">
+		Copyright © 2002-2003 Microsoft Corporation. All rights reserved. </span>
+		<br>
+		</p>
+		<p></td>
+	</tr>
+</table>
+</body>
+
+</html>

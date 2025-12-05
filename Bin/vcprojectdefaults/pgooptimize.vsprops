@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<VisualStudioPropertySheet 
+	ProjectType="Visual C++" 
+	Version="8.00" 
+	Name="PGO - Optimized Build Properties"
+	>
+	<Tool 
+		Name="VCCLCompilerTool"
+		WholeProgramOptimization="true"
+	/>
+	<Tool 
+		Name="VCLinkerTool"
+		LinkTimeCodeGeneration="3"
+		ProfileGuidedDatabase="$(TargetDir)$(TargetName).inst.pgd"
+	/>
+</VisualStudioPropertySheet>
